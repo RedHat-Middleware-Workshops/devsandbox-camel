@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+      "redhat.java",
+      "redhat.apache-camel-extension-pack"
+    ]
+  }
