@@ -3,6 +3,7 @@
 # MAIN route
 - from:
     id: main
+    description: getDetails
     uri: direct:getDetails
     steps:
 
@@ -24,6 +25,7 @@
 
 - from:
     id: json2soap
+    description: json2soap
     uri: direct:json2soap
     steps:
       - convertBodyTo:
@@ -44,6 +46,7 @@
 
 - from:
     id: soap2json
+    description: soap2json
     uri: direct:soap2json
     steps:
       - setBody:
