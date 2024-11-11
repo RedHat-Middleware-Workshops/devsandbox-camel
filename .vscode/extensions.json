@@ -1,6 +1,7 @@
 {
     "recommendations": [
       "redhat.java",
-      "redhat.apache-camel-extension-pack"
+      "redhat.apache-camel-extension-pack",
+     "cnshenj.vscode-task-manager"
     ]
   }
