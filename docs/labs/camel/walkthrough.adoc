@@ -504,10 +504,10 @@ In the logs, you will see Camel react by restarting and executing the route only
 +
 [source, subs=]
 ----
-https://random-data-api.com/api/v2/users?response_type=xml
+https://randomuser.me/api/?format=xml
 ----
 +
-NOTE: The parameter `response_type` tells the server to return the data in XML format.
+NOTE: The parameter `format` tells the server to return the data in XML format.
 +
 .. Look at the figure below and follow these steps:
 +
@@ -531,15 +531,15 @@ In the logs, you will see _Camel_ reacting and fetching an XML response from the
 ... : Routes reloaded summary (total:1 started:1)
 ... :     Started route-4178 (timer://yaml) (source: user.camel.yaml:4)
 ... : <?xml version="1.0" encoding="UTF-8"?>
-<hash>
-  <id type="integer">9582</id>
-  <uid>837ec527-7925-4904-84ac-8b9113c2dbd8</uid>
-  <password>iobemgl1ZH</password>
-  <first-name>Carl</first-name>
-  <last-name>Auer</last-name>
-  <username>carl.auer</username>
-  <email>carl.auer@email.com</email>
-  ...
+<user>
+        <results>
+                <gender>male</gender>
+                <name>
+                        <title>Mr</title>
+                        <first>Gabriel</first>
+                        <last>Cook</last>
+                </name>
+                ...
 ----
 +
 {empty} +
@@ -639,15 +639,15 @@ The invocation should return an XML payload similar to:
 +
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<hash>
-  <id type="integer">9867</id>
-  <uid>f7907251-4336-40d3-8502-a1021a1a10b4</uid>
-  <password>KsbN09mckU</password>
-  <first-name>Danny</first-name>
-  <last-name>Stehr</last-name>
-  <username>danny.stehr</username>
-  <email>danny.stehr@email.com</email>
-  ...
+<user>
+        <results>
+                <gender>female</gender>
+                <name>
+                        <title>Miss</title>
+                        <first>Sonia</first>
+                        <last>Solís</last>
+                </name>
+                ...
 ----
 +
 {blank}
@@ -728,12 +728,14 @@ The invocation should return JSON data, similar to:
 +
 ----
 {
-  "phone-number": "+63 890.053.3511 x6876",
-  "address": {
-    "city": "Feestport",
-    "street-name": "Cecil Camp",
-    "street-address": "12806 Abbott Summit",
-  ...
+  "results": {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Félix",
+      "last": "Benítez"
+    },
+    ...
 ----
 +
 {empty} +
@@ -877,11 +879,13 @@ Again, you should see a similar JSON response as per your previous test run loca
 +
 ----
 {
-  "phone-number": "+375 1-790-160-4090 x0991",
-  "address": {
-    "city": "East Justinafurt",
-    "street-name": "Jerde Club",
-    "street-address": "860 Yaeko Ramp",
+  "results": {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Felix",
+      "last": "Roybal"
+    },
     ...
 ----
 
