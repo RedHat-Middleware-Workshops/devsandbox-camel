@@ -3,14 +3,13 @@ metadata:
   name: devsandbox-camel-labs
 components:
   - name: tools
-    container:
-      image: quay.io/devfile/universal-developer-image:ubi8-latest
+    container:    
+      # image: quay.io/devfile/universal-developer-image:ubi8-latest
+      image: quay.io/devfile/universal-developer-image:ubi9-latest
       memoryLimit: 3Gi
       env:
         - name: JAVA_HOME_TEST
           value: /home/tooling/.sdkman/candidates/java/17.0.3-tem
-        - name: KUBEDOCK_ENABLED
-          value: 'true'
       endpoints:
         - exposure: none
           name: debug
