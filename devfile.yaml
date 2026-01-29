@@ -5,7 +5,8 @@ components:
   - name: tools
     container:    
       # image: quay.io/devfile/universal-developer-image:ubi8-latest
-      image: registry.redhat.io/devspaces/udi-rhel9@sha256:8a19af8b03b59562335b3a3f77753944c27ecbccaeda3400d0f089a6cd8d11fa
+      # image: registry.redhat.io/devspaces/udi-rhel9@sha256:8a19af8b03b59562335b3a3f77753944c27ecbccaeda3400d0f089a6cd8d11fa
+      image: quay.io/devfile/universal-developer-image:ubi9-latest
       memoryLimit: 3Gi
       env:
         - name: JAVA_HOME_TEST
