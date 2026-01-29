@@ -10,7 +10,7 @@ components:
         - name: JAVA_HOME_TEST
           value: /home/tooling/.sdkman/candidates/java/17.0.3-tem
         - name: KUBEDOCK_ENABLED
-          value: true
+          value: 'true'
       endpoints:
         - exposure: none
           name: debug
