@@ -5,8 +5,8 @@ components:
   - name: tools
     container:    
       # image: quay.io/devfile/universal-developer-image:ubi8-latest
-      image: registry.redhat.io/devspaces/udi-rhel9@sha256:8a19af8b03b59562335b3a3f77753944c27ecbccaeda3400d0f089a6cd8d11fa
-      # image: quay.io/devfile/universal-developer-image:ubi9-latest
+      # image: registry.redhat.io/devspaces/udi-rhel9@sha256:8a19af8b03b59562335b3a3f77753944c27ecbccaeda3400d0f089a6cd8d11fa
+      image: quay.io/devfile/universal-developer-image:ubi9-latest
       memoryLimit: 3Gi
       env:
         - name: JAVA_HOME_TEST
@@ -94,10 +94,10 @@ commands:
           # 2. Append a visual warning to .bashrc that triggers on every new terminal
           cat << 'EOF' >> ~/.bashrc
         # CAMEL_JBANG_INSTALL_FAILURE
-        echo -e "\n\033[1;33m+-------------------------------------------------------------+\033[0m"
-        echo -e "\033[1;31m|  [!] WARNING: Camel JBang failed to install during startup. |\033[0m"
+        echo -e "\n\033[1;33m+--------------------------------------------------------------+\033[0m"
+        echo -e "\033[1;31m|  [!] WARNING: Camel JBang failed to install during startup.  |\033[0m"
         echo -e "\033[1;31m|  Please run the installation command manually in this shell. |\033[0m"
-        echo -e "\033[1;33m+-------------------------------------------------------------+\033[0m\n"
+        echo -e "\033[1;33m+--------------------------------------------------------------+\033[0m\n"
         # END_CAMEL_WARNING
         EOF
 
