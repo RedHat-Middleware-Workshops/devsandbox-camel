@@ -10,8 +10,10 @@
 		"git.enabled": false,
 		"files.exclude": {
 			".vscode": true,
-			"docs": true,
 			".code-workspace": true,
+			"docs": true,
+			"devfile.yaml": true,
+			"walkthroughs-config.json": true,
 			".*": true,
 			"**/.gitignore": true,
 			"**/.camel-jbang": true,
