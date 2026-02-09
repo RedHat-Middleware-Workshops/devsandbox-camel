@@ -41,7 +41,7 @@ components:
           value: '4'
         - name: WALKTHROUGH_LOCATIONS
           value: >-
-            https://github.com/RedHat-Middleware-Workshops/devsandbox-camel?walkthroughsFolder=/docs/labs,https://github.com/RedHat-Middleware-Workshops/devsandbox-camel-jbang-test/?walkthroughsFolder=/docs/labs
+            https://github.com/RedHat-Middleware-Workshops/devsandbox-camel?walkthroughsFolder=/docs/labs,https://github.com/RedHat-Middleware-Workshops/devsandbox-camel-jbang/?walkthroughsFolder=/docs/labs
       endpoints:
         - name: tutorial
           exposure: public
